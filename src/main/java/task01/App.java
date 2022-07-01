@@ -30,7 +30,6 @@ public class App {
                 //This should solve the read file issue
                 }
             for(int i=0; i<=column.length;i++){
-                if(i<)
             }
             //Store the words under the specific headers 
             //Replace the column with row
