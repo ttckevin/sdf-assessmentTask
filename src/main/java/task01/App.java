@@ -1,5 +1,6 @@
 package task01;
 
+import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,10 +16,14 @@ public class App {
 
         String path = "C:/Users/T1me/Desktop/codingRevision/assessmentTask1/tour_packages.csv";
         String line = " ";
-
+        String[] fieldNames = { "first_name", "last_name", "Address", "years"};
+        //
+        String[][] rowColumns;
         try {
             BufferedReader br = new BufferedReader(new FileReader(path));
-
+            String firstLine = br.readLine();
+            String[] firstLineComponents =firstLine.split(",");
+            //first_name last_name address years
             while ((line = br.readLine()) != null ){
                 // System.out.println(line);
                 String [] column = line.split(",");
@@ -29,8 +34,7 @@ public class App {
                    System.out.print(a + " ");
                 //This should solve the read file issue
                 }
-            for(int i=0; i<=column.length;i++){
-            }
+
             //Store the words under the specific headers 
             //Replace the column with row
             //Read Files
@@ -44,4 +48,3 @@ public class App {
         }
     }
 }
-
