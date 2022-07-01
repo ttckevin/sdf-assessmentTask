@@ -4,7 +4,6 @@ import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
@@ -19,9 +18,6 @@ public class App
         DataInputStream dis;
         BufferedInputStream bis;
         try {
-            ServerSocket ss = new ServerSocket(port);
-            System.out.println("[SERVER] Waiting for a connection...");
-
             while(true){
                 
                 try {
@@ -76,7 +72,6 @@ public class App
                 bis.close();
                 ois.close();
                 clientSocket.close();
-                ss.close();       
 
                 } catch (UnknownHostException uhe) {
     
