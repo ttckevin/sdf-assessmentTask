@@ -13,7 +13,7 @@ public class App
 {
     public static void main( String[] args )throws Exception {
         final int port = 80;
-        String emailAddress = "task02.chuklee.com";
+        String IP = "68.183.239.26";
         ObjectInputStream ois;
         ObjectOutputStream oos;
         DataInputStream dis;
@@ -25,7 +25,7 @@ public class App
             while(true){
                 
                 try {
-                   Socket clientSocket = new Socket(emailAddress,port);
+                   Socket clientSocket = new Socket(IP,port);
                    //Note: Get your outputStream first followed by InputStream!!!
                    oos = new ObjectOutputStream(clientSocket.getOutputStream());
                     ois = new ObjectInputStream(clientSocket.getInputStream());
